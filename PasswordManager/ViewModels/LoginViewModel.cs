@@ -7,15 +7,20 @@ using System.Threading.Tasks;
 
 namespace PasswordManager.ViewModels
 {
-    public class ShellViewModel : Conductor<object>
+    public class LoginViewModel : Screen
     {
-        private readonly LoginViewModel _loginVM;
+        private string _masterkey;
         private readonly IEventAggregator _eventAggregator;
-        public ShellViewModel(IEventAggregator eventAggregator, LoginViewModel loginVM)
+
+        public LoginViewModel(IEventAggregator eventAggregator, LoginViewModel loginVM)
         {
             _eventAggregator = eventAggregator;
-            _loginVM = loginVM;
-            ActivateItem(_loginVM);
+        }
+
+        public string Masterkey
+        {
+            get { return _masterkey; }
+            set { _masterkey = value; }
         }
     }
 }
