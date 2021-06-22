@@ -12,7 +12,7 @@ namespace PasswordManager.ViewModels
         private string _masterkey;
         private readonly IEventAggregator _eventAggregator;
 
-        public LoginViewModel(IEventAggregator eventAggregator, LoginViewModel loginVM)
+        public LoginViewModel(IEventAggregator eventAggregator)
         {
             _eventAggregator = eventAggregator;
         }
